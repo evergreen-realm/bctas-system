@@ -1,0 +1,218 @@
+{
+  "nextId": 6,
+  "applications": [
+    {
+      "id": 1,
+      "applicationId": 1,
+      "trackingNumber": "NKU-2026-00421",
+      "childName": "Amani Wanjiku Kamau",
+      "dateOfBirth": "2026-09-21",
+      "gender": "Female",
+      "placeOfBirth": "Nakuru Level 5 Hospital",
+      "birthFacilityCode": "CRS-NAK-05",
+      "birthNotificationNo": "BN-26-09121",
+      "parentNationalId": "28419204",
+      "parentFullName": "Wanjiku Kamau",
+      "parentRelationship": "Mother",
+      "contactPhone": "+254712345678",
+      "contactEmail": "citizen1@example.test",
+      "subCounty": "Nakuru Town East",
+      "ward": "Biashara",
+      "idVerificationStatus": "VERIFIED_IPRS",
+      "verifiedAt": "2026-10-13T06:46:34.456Z",
+      "currentStatus": "Collected",
+      "submittedDate": "2026-10-13T06:46:34.456Z",
+      "lastUpdated": "2026-10-13T06:46:34.456Z",
+      "statusHistory": [
+        {
+          "oldStatus": "Submitted",
+          "newStatus": "Collected",
+          "changedAt": "2026-10-13T06:46:34.456Z",
+          "justification": "Seeded registry record for operational preview",
+          "actor": "System seed"
+        }
+      ],
+      "certificate": {
+        "certificateNumber": "CERT-NAK-00421",
+        "securitySerialNumber": "CRS-26-771002",
+        "verificationQrHash": "9a3e1954f820532e0c2f36b67f89dfc0c99c32ecae5104503fb1c001187ac074",
+        "issuedDate": "2026-10-13",
+        "collectedDate": "2026-10-14",
+        "collectorName": "Wanjiku Kamau"
+      }
+    },
+    {
+      "id": 2,
+      "applicationId": 2,
+      "trackingNumber": "NKU-2026-00422",
+      "childName": "Baraka Kiptoo Rotich",
+      "dateOfBirth": "2026-09-24",
+      "gender": "Male",
+      "placeOfBirth": "Molo Sub-County Hospital",
+      "birthFacilityCode": "CRS-NAK-05",
+      "birthNotificationNo": "BN-26-09144",
+      "parentNationalId": "29100412",
+      "parentFullName": "Kiptoo Rotich",
+      "parentRelationship": "Father",
+      "contactPhone": "+254723441180",
+      "contactEmail": "citizen2@example.test",
+      "subCounty": "Molo",
+      "ward": "Molo Township",
+      "idVerificationStatus": "UNVERIFIED",
+      "currentStatus": "Pending Verification",
+      "submittedDate": "2026-10-12T06:46:34.457Z",
+      "lastUpdated": "2026-10-12T06:46:34.457Z",
+      "statusHistory": [
+        {
+          "oldStatus": "Submitted",
+          "newStatus": "Pending Verification",
+          "changedAt": "2026-10-12T06:46:34.457Z",
+          "justification": "Seeded registry record for operational preview",
+          "actor": "System seed"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "applicationId": 3,
+      "trackingNumber": "NKU-2026-00423",
+      "childName": "Njeri Akinyi Ouma",
+      "dateOfBirth": "2026-09-26",
+      "gender": "Female",
+      "placeOfBirth": "Nakuru Level 5 Hospital",
+      "birthFacilityCode": "CRS-NAK-05",
+      "birthNotificationNo": "BN-26-09172",
+      "parentNationalId": "31842096",
+      "parentFullName": "Akinyi Ouma",
+      "parentRelationship": "Mother",
+      "contactPhone": "+254701993210",
+      "contactEmail": "citizen3@example.test",
+      "subCounty": "Nakuru Town East",
+      "ward": "Kivumbini",
+      "idVerificationStatus": "VERIFIED_IPRS",
+      "verifiedAt": "2026-10-11T06:46:34.457Z",
+      "currentStatus": "Verified",
+      "submittedDate": "2026-10-11T06:46:34.457Z",
+      "lastUpdated": "2026-10-11T06:46:34.457Z",
+      "statusHistory": [
+        {
+          "oldStatus": "Submitted",
+          "newStatus": "Verified",
+          "changedAt": "2026-10-11T06:46:34.457Z",
+          "justification": "Seeded registry record for operational preview",
+          "actor": "System seed"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "applicationId": 4,
+      "trackingNumber": "NKU-2026-00424",
+      "childName": "Musa Mwangi Kariuki",
+      "dateOfBirth": "2026-09-28",
+      "gender": "Male",
+      "placeOfBirth": "Naivasha Sub-County Hospital",
+      "birthFacilityCode": "CRS-NAK-05",
+      "birthNotificationNo": "BN-26-09201",
+      "parentNationalId": "24018830",
+      "parentFullName": "Mwangi Kariuki",
+      "parentRelationship": "Father",
+      "contactPhone": "+254733980122",
+      "contactEmail": "citizen4@example.test",
+      "subCounty": "Naivasha",
+      "ward": "Lake View",
+      "idVerificationStatus": "VERIFIED_IPRS",
+      "verifiedAt": "2026-10-10T06:46:34.457Z",
+      "currentStatus": "Approved",
+      "submittedDate": "2026-10-10T06:46:34.457Z",
+      "lastUpdated": "2026-10-10T06:46:34.457Z",
+      "statusHistory": [
+        {
+          "oldStatus": "Submitted",
+          "newStatus": "Approved",
+          "changedAt": "2026-10-10T06:46:34.457Z",
+          "justification": "Seeded registry record for operational preview",
+          "actor": "System seed"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "applicationId": 5,
+      "trackingNumber": "NKU-2026-00425",
+      "childName": "Zawadi Chebet Kiplagat",
+      "dateOfBirth": "2026-10-01",
+      "gender": "Female",
+      "placeOfBirth": "Rongai Health Centre",
+      "birthFacilityCode": "CRS-NAK-05",
+      "birthNotificationNo": "BN-26-09230",
+      "parentNationalId": "30177542",
+      "parentFullName": "Chebet Kiplagat",
+      "parentRelationship": "Mother",
+      "contactPhone": "+254719240331",
+      "contactEmail": "citizen5@example.test",
+      "subCounty": "Rongai",
+      "ward": "Solai",
+      "idVerificationStatus": "VERIFIED_IPRS",
+      "verifiedAt": "2026-10-09T06:46:34.457Z",
+      "currentStatus": "Submitted",
+      "submittedDate": "2026-10-09T06:46:34.457Z",
+      "lastUpdated": "2026-10-09T06:46:34.457Z",
+      "statusHistory": [
+        {
+          "oldStatus": "Submitted",
+          "newStatus": "Submitted",
+          "changedAt": "2026-10-09T06:46:34.457Z",
+          "justification": "Seeded registry record for operational preview",
+          "actor": "System seed"
+        }
+      ]
+    }
+  ],
+  "audit": [],
+  "events": [],
+  "settings": {
+    "officeName": "Nakuru Civil Registration Office",
+    "slaDays": "5",
+    "smsProvider": "Africa's Talking adapter ready",
+    "stationCode": "CRS-NAK-05"
+  },
+  "staff": [
+    {
+      "employeeId": "CRS-ADM-001",
+      "fullName": "Faith Njeri",
+      "role": "Administrator",
+      "email": "faith.njeri@crs.go.ke",
+      "counter": "HQ",
+      "active": true,
+      "eulaAcceptedAt": "2026-10-14T06:46:34.457Z"
+    },
+    {
+      "employeeId": "CRS-REG-014",
+      "fullName": "Daniel Karanja",
+      "role": "Registrar",
+      "email": "daniel.karanja@crs.go.ke",
+      "counter": "R1",
+      "active": true,
+      "eulaAcceptedAt": "2026-10-14T06:46:34.457Z"
+    },
+    {
+      "employeeId": "CRS-CLK-021",
+      "fullName": "Mercy Wambui",
+      "role": "Clerk",
+      "email": "mercy.wambui@crs.go.ke",
+      "counter": "C3",
+      "active": true,
+      "eulaAcceptedAt": "2026-10-14T06:46:34.457Z"
+    },
+    {
+      "employeeId": "CRS-AUD-003",
+      "fullName": "Josephine Achieng",
+      "role": "Auditor",
+      "email": "josephine.achieng@crs.go.ke",
+      "counter": "AUD",
+      "active": true,
+      "eulaAcceptedAt": "2026-10-14T06:46:34.457Z"
+    }
+  ]
+}

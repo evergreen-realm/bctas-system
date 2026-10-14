@@ -1,0 +1,11 @@
+name = "bcats-nakuru"
+compatibility_date = "2026-10-12"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bcats-nakuru"
+database_id = "replace-after-provisioning"
+
+[[r2_buckets]]
+binding = "DOCUMENTS_BUCKET"
+bucket_name = "bcats-documents"
