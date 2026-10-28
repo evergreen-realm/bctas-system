@@ -72,7 +72,7 @@ function Table({
   onSelect?: (item: Application) => void;
 }) {
   const [page, setPage] = useState(1);
-  const pageSize = 5;
+  const pageSize = 4;
   const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
   const currentItems = items.slice((page - 1) * pageSize, page * pageSize);
 

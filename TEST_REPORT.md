@@ -30,7 +30,7 @@ Quality assurance for BCATS was executed across five distinct tiers:
     │         (7/7 Sequential Stages from Intake to Handover)     │
     ├─────────────────────────────────────────────────────────────┤
     │           Tier 2: Automated Vitest Aggregate Tests          │
-    │           (9/9 Passing across 3 Test Suites)                │
+    │           (25/25 Passing across 6 Test Suites)              │
     ├─────────────────────────────────────────────────────────────┤
     │           Tier 1: Static Type Checking (TypeScript)         │
     │           (Strict mode compilation, 0 errors)               │
@@ -68,9 +68,9 @@ Quality assurance for BCATS was executed across five distinct tiers:
 
 - **Test Runner:** Vitest v2.1.9
 - **Command:** `pnpm test`
-- **Execution Duration:** 8.57s
-- **Total Test Files:** 5 passed (100%)
-- **Total Tests:** 20 passed (100%)
+- **Execution Duration:** 5.48s
+- **Total Test Files:** 6 passed (100%)
+- **Total Tests:** 25 passed (100%)
 
 | Test Suite File | Test Case Description | Duration | Status |
 |---|---|---:|---|
@@ -82,6 +82,11 @@ Quality assurance for BCATS was executed across five distinct tiers:
 | `server/auth.roles.test.ts` | allows Registrar to approve a verified application | 14 ms | **PASS** |
 | `server/auth.roles.test.ts` | strictly filters frontend navigation tabs and direct URL route clearance per role | 987 ms | **PASS** |
 | `server/auth.roles.test.ts` | strictly enforces statutory backend RBAC rejections for unauthorized endpoints | 84 ms | **PASS** |
+| `server/bcats.enterprise.test.ts` | processes physical handover collection with ledger coordinates and SMS trigger | 347 ms | **PASS** |
+| `server/bcats.enterprise.test.ts` | returns an application for correction with deficiency reason and SMS trigger | 24 ms | **PASS** |
+| `server/bcats.enterprise.test.ts` | escalates an application to County Registrar and logs statutory audit entry | 18 ms | **PASS** |
+| `server/bcats.enterprise.test.ts` | handles Africa's Talking SMS test dispatch | 6 ms | **PASS** |
+| `server/bcats.enterprise.test.ts` | exports vault backup JSON and restores via factory reset | 330 ms | **PASS** |
 | `server/client.resilience.test.ts` | handles /bootstrap locally and computes overview correctly | 62 ms | **PASS** |
 | `server/client.resilience.test.ts` | creates application offline with proper normalization and KDPA consent | 21 ms | **PASS** |
 | `server/client.resilience.test.ts` | verifies and transitions applications through audited lifecycle | 43 ms | **PASS** |
@@ -204,5 +209,5 @@ Every screen was tested for four essential interaction states:
 
 ## 8. Test Conclusion & Sign-Off
 
-All 9 unit tests, 7 sequential lifecycle stages, 7 negative boundary cases, and 15 interactive screen routes passed unconditionally without regressions. The system is certified robust, secure, and ready for diploma project assessment.
+All 25 automated unit and enterprise workflow tests across 6 test suites, 7 sequential lifecycle stages, 7 negative boundary cases, and 15 interactive screen routes passed unconditionally without regressions. The system is certified robust, secure, and ready for diploma project assessment.
 

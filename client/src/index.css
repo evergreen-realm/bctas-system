@@ -354,21 +354,51 @@ input:checked + .slider:before { transform: translateX(20px); }
   body { background: #fff !important; color: #000 !important; }
   .app-shell .sidebar,
   .topbar,
+  .page-head,
   .certificate-toolbar,
   .floating-handset-btn,
   .handset-drawer-backdrop,
+  .modal-header,
+  .modal-footer,
   .no-print { display: none !important; }
   .app-shell .main { margin: 0 !important; width: 100% !important; }
   .content { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+  .printing-workspace-grid { display: block !important; }
+  .printing-preview-column { width: 100% !important; }
+
+  /* When printing from modal backdrop (like Handover Receipt), hide background desk */
+  body:has(.modal-backdrop) .collection-screen-root {
+    display: none !important;
+  }
+  .modal-backdrop {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+  }
+  .modal-dialog {
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .modal-body {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
   .form5-paper-root, .receipt-paper {
     box-shadow: none !important;
     border: none !important;
     padding: 0 !important;
     margin: 0 auto !important;
     width: 100% !important;
+    max-width: 100% !important;
   }
   @page {
     size: A4 portrait;
-    margin: 10mm;
+    margin: 8mm;
   }
 }

@@ -268,3 +268,4 @@ export function AddStaffModal({ isOpen, onClose, onAdd, busy = false }: AddStaff
     </div>
   );
 }
+

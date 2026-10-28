@@ -88,7 +88,7 @@ This document provides an explicit, evidence-backed mapping between the academic
 
 | Requirement Sub-Item | Implementation in BCATS | Concrete Code & File References |
 |---|---|---|
-| **Unit & Integration Testing** | Vitest automated test suite with 20/20 tests passing (100% pass rate) across 5 test suites (`server/auth.roles.test.ts`, `server/client.resilience.test.ts`, `server/bcatsStore.test.ts`, `server/auth.logout.test.ts`, `server/platform.test.ts`). | `server/auth.roles.test.ts`, `server/client.resilience.test.ts`, `TEST_REPORT.md` (Sec. 3) |
+| **Unit & Integration Testing** | Vitest automated test suite with 25/25 tests passing (100% pass rate) across 6 test suites (`server/auth.roles.test.ts`, `server/bcats.enterprise.test.ts`, `server/client.resilience.test.ts`, `server/bcatsStore.test.ts`, `server/auth.logout.test.ts`, `server/platform.test.ts`). | `server/auth.roles.test.ts`, `server/bcats.enterprise.test.ts`, `TEST_REPORT.md` (Sec. 3) |
 | **End-to-End Operational Lifecycle** | 7-step automated lifecycle script exercising Bootstrap, Create, Verify, Approve, Print, Collect, and Audit. | `scripts/test_lifecycle.py`, `TEST_REPORT.md` (Sec. 4) |
 | **Edge Case & Negative Testing** | Automated negative test suite exercising consent absence, short IDs, illegal transitions, and role violations. | `scripts/test_edge_cases.py`, `TEST_REPORT.md` (Sec. 5) |
 | **Live Production Hosting** | Production edge deployment hosted on Cloudflare Pages (`https://bcats-nakuru.pages.dev`, immutable deployment `550c08e3.bcats-nakuru.pages.dev`) serving all routes with HTTP 200. | `DEPLOYMENT.md`, `wrangler.toml`, `https://bcats-nakuru.pages.dev` |

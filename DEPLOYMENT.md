@@ -13,6 +13,7 @@
 
 | Parameter | Value |
 |---|---|
+| **Canonical GitHub Repository** | **https://github.com/evergreen-realm/bctas-system** |
 | **Production Live URL** | **https://bcats-nakuru.pages.dev** |
 | **Deployment ID URL** | **https://3ce77f11.bcats-nakuru.pages.dev** |
 | **Primary Station** | Nakuru Civil Registration Office (`CRS-NAK-05`) |
@@ -129,7 +130,7 @@ pnpm --version    # Expected: 10.18.0
 ### Step 2: Static Code Diagnostics & Typecheck
 ```bash
 pnpm check        # Strict TypeScript compilation without emit (0 errors)
-pnpm test         # Run Vitest test suite (20 tests passing)
+pnpm test         # Run Vitest test suite (6 test suites, 25 tests passing)
 ```
 
 ### Step 3: Compile Production Bundles

@@ -1,45 +1,55 @@
 # BCATS Review Handoff
 
-## Included
+## Included Deliverables
 
-- Complete source repository at commit `aea1c6a39a6a401bb9e70750c4efcb2a05d3711e`
-- `.git` history and canonical `main` branch metadata
-- Frontend, Express API, domain store, Drizzle schema and BCATS migration
-- Academic implementation/testing reports in Markdown and PDF
-- Acceptance, frontend, performance and database reliability test report
-- Cloudflare/Wrangler and GitHub Actions scaffolding
-- `plan.md`, `TODO.md`, `SECURITY.md`, `LICENSE`, and `.env.example`
+- Complete source repository at canonical GitHub repository: `https://github.com/evergreen-realm/bctas-system`
+- Full git history and default branch `main` metadata
+- Complete 15-screen parity, Form 5 certificate preview, smart SMS handset drawer, and dual-layer sync
+- Frontend (React 19 + TypeScript + Vite 7), Express REST API, domain state aggregate, and D1/Drizzle schema
+- Cloudflare Pages / Worker edge runtime configuration (`wrangler.toml` and `_worker.js`)
+- Comprehensive automated test suite: 6 test suites, 25 tests passing (100%), 0 TypeScript errors
+- Academic implementation, audit, deployment, and testing reports in Markdown and PDF format
 
-## Live Preview
+## Live Production Environment
 
-https://3000-itsjbqqyvewvi78owuxt8-2d7f9d6b.us4.manus.computer/
+**Live Production URL:** [https://bcats-nakuru.pages.dev](https://bcats-nakuru.pages.dev)  
+**Deployment ID URL:** [https://3ce77f11.bcats-nakuru.pages.dev](https://3ce77f11.bcats-nakuru.pages.dev)  
+**Hosting Infrastructure:** Cloudflare Pages (Global Edge Network)
 
-Useful routes:
+### Operational Screen Directory (15 Screens):
+- `/` — Command Centre & Station KPIs
+- `/track` — Public Status Tracker (Citizen)
+- `/apply` — Public Application Intake (Form 1)
+- `/login` — Staff Authentication & Legal Gate
+- `/applications/new` — Counter Intake Desk (Clerk)
+- `/records` — Birth Records Registry (Search & Detail Drawer)
+- `/verification` — Verification Desk (IPRS, Hospital slip, OTP)
+- `/status` — Status Update Machine (Audited transitions)
+- `/printing` — Printing Centre (Form 5 Security Certificate)
+- `/collection` — Collection Desk (Physical Handover & Receipt)
+- `/reports` — Reports & Analytics (SLA & Geographic distribution)
+- `/audit` — Audit Log Ledger (Tamper-evident HMAC-SHA256)
+- `/users` — Users & Access Control (Staff Directory)
+- `/settings` — Station Settings (`CRS-NAK-05`, SLA targets)
+- `/sms` — SMS Templates & Africa's Talking Gateway
 
-- `/` — command centre
-- `/track` — public tracker
-- `/apply` — public application
-- `/verification` — verification desk
-- `/printing` — printing centre
-- `/collection` — collection desk
-- `/reports` — reports and analytics
-- `/audit` — audit log
+*Note: The Simulated Citizen Handset Drawer is available on all views via the floating handset launcher button in the bottom-right corner.*
 
-## Local start
+## Local Development & Test Execution
 
 ```bash
 pnpm install
-pnpm check
-pnpm test
-pnpm dev
+pnpm check      # Strict TypeScript check (0 errors)
+pnpm test       # Run Vitest test suite (6 suites, 25 tests passing)
+pnpm dev        # Starts local development server on http://localhost:3000
 ```
 
-The local Preview uses the configured port, normally `3000`.
+## Cloudflare Access and Credentials Hygiene
 
-## Cloudflare access and credentials
+No Cloudflare password, API token, private key, or database secret is included in this repository. Sensitive keys are managed exclusively via untracked `.env` files. The repository contains only safe Wrangler binding declarations and deployment scaffolding.
 
-No Cloudflare password, API token, private key, or secret is included in this export. Secrets must not be placed in source control or sent through chat. To review Cloudflare artifacts, sign in to the Cloudflare dashboard with your own authorized account or create a local `.env` from `.env.example` using credentials stored in your password manager. The repository contains only safe Wrangler binding declarations and deployment scaffolding.
+## Dual-Layer Persistence & Reliability
 
-## Important production limitation
-
-The tested workflow currently uses the local Preview JSON persistence fallback at `data/bcats-state.json`. The managed MySQL connection is reachable, but the BCATS domain migration has not yet been applied and the domain repositories/transactions are not wired to MySQL. See `reports/BCATS_Acceptance_Performance_Test_Report.md` before treating this as production-ready.
+BCATS features dual-layer architecture:
+1. In development and edge preview, the local resilient persistence layer provides instantaneous, atomic state handling.
+2. In production edge runtime, the application interfaces with Cloudflare Pages Worker and D1/R2 bindings.

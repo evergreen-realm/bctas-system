@@ -65,7 +65,7 @@ export default function PrintingScreen({
   return (
     <div className="printing-screen-root">
       {/* Screen 06 Top KPI Cards */}
-      <div className="metric-grid" style={{ marginBottom: "1.5rem" }}>
+      <div className="metric-grid no-print" style={{ marginBottom: "1.5rem" }}>
         <div className="metric terracotta">
           <div className="metric-label">Ready for print</div>
           <strong>{readyQueue.length}</strong>
@@ -90,7 +90,7 @@ export default function PrintingScreen({
 
       <div className="printing-workspace-grid" style={{ display: "grid", gridTemplateColumns: "360px 1fr", gap: "1.5rem", alignItems: "start" }}>
         {/* Left Column: Approved Queue */}
-        <section className="card" style={{ height: "fit-content" }}>
+        <section className="card no-print" style={{ height: "fit-content" }}>
           <div className="card-head">
             <div>
               <div className="eyebrow">Approved queue / FIFO</div>
@@ -156,7 +156,7 @@ export default function PrintingScreen({
               />
 
               {/* Print Confirmation Bar */}
-              <section className="card" style={{ padding: "1.25rem" }}>
+              <section className="card no-print" style={{ padding: "1.25rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
                   <div>
                     <div style={{ fontSize: "12px", fontWeight: 700, color: "var(--foreground, #1e293b)" }}>
@@ -203,3 +203,4 @@ export default function PrintingScreen({
     </div>
   );
 }
+

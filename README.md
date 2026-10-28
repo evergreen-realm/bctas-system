@@ -1,9 +1,9 @@
 # Birth Certificate Application Tracking System (BCATS) — Nakuru Civil Registration Office
 
 [![Live Production](https://img.shields.io/badge/Live%20Production-bcats--nakuru.pages.dev-success?style=for-the-badge&logo=cloudflare)](https://bcats-nakuru.pages.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3%20(0%20Errors)-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.2.1-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
-[![Vitest Passing](https://img.shields.io/badge/Vitest-20%20Passed-brightgreen?style=for-the-badge&logo=vitest)](https://vitest.dev/)
+[![Vitest Passing](https://img.shields.io/badge/Vitest-25%20Passed%20(6%20Suites)-brightgreen?style=for-the-badge&logo=vitest)](https://vitest.dev/)
 [![Status](https://img.shields.io/badge/Zetech%20Diploma-DSE--01--0227%2F2025-orange?style=for-the-badge)](https://zetech.ac.ke/)
 
 A full-stack, audited civil registration workflow application and public citizen portal engineered for the **Nakuru Civil Registration Office** (`CRS-NAK-05`), developed as the capstone diploma software engineering project at **Zetech University**.
@@ -18,6 +18,7 @@ A full-stack, audited civil registration workflow application and public citizen
 - **Candidate:** Meshack Mumo Maluki
 - **Admission Number:** `DSE-01-0227/2025`
 - **Station Scope:** Nakuru Civil Registration Office (`CRS-NAK-05`), Nakuru County, Kenya
+- **Canonical GitHub Repository:** [https://github.com/evergreen-realm/bctas-system](https://github.com/evergreen-realm/bctas-system)
 - **Live Production URL:** [https://bcats-nakuru.pages.dev](https://bcats-nakuru.pages.dev)
 - **Deployment ID URL:** [https://550c08e3.bcats-nakuru.pages.dev](https://550c08e3.bcats-nakuru.pages.dev)
 
@@ -116,19 +117,19 @@ Historically, birth certificate issuance at the Nakuru Civil Registration statio
 
 ### 1. Installation
 ```bash
-git clone https://github.com/MeshackMaluki/bcats-nakuru.git
-cd bcats-nakuru
+git clone https://github.com/evergreen-realm/bctas-system.git
+cd bctas-system
 pnpm install
 ```
 
 ### 2. Static Diagnostics & Typecheck
 ```bash
-pnpm check      # Runs tsc --noEmit (0 errors)
+pnpm check      # Runs tsc --noEmit (0 errors, 0 warnings)
 ```
 
 ### 3. Automated Unit Testing
 ```bash
-pnpm test       # Runs Vitest test suite (9/9 passed)
+pnpm test       # Runs Vitest test suite (6 suites, 25/25 passed, 100%)
 ```
 
 ### 4. Build Production Bundle

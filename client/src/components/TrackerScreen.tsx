@@ -193,3 +193,4 @@ export default function TrackerScreen({ notify, api }: TrackerScreenProps) {
     </div>
   );
 }
+

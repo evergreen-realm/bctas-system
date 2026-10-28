@@ -65,7 +65,7 @@ export function ConfirmCollectionModal({
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-dialog modal-md" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-dialog modal-md confirm-collection-modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <div className="modal-title-wrap">
             <span className="modal-icon-badge">
@@ -227,7 +227,12 @@ export function ViewReceiptModal({ isOpen, onClose, application }: ViewReceiptMo
   if (!isOpen) return null;
 
   const handlePrint = () => {
+    const prevTitle = document.title;
+    document.title = `BCATS_Handover_Receipt_${application.trackingNumber}`;
     window.print();
+    setTimeout(() => {
+      document.title = prevTitle;
+    }, 1200);
   };
 
   const receiptNo = `CRS-REC-2026-${String(application.applicationId).padStart(4, "0")}`;
@@ -357,3 +362,4 @@ export function ViewReceiptModal({ isOpen, onClose, application }: ViewReceiptMo
     </div>
   );
 }
+

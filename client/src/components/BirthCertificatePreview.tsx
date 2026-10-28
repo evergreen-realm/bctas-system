@@ -137,15 +137,25 @@ export default function BirthCertificatePreview({
   const issueDate = application.certificate?.issuedDate || labelDate(application.lastUpdated);
 
   const handlePrint = () => {
+    const prevTitle = document.title;
+    document.title = `Republic_of_Kenya_Form5_Birth_Certificate_${application.trackingNumber}`;
     if (onPrint) {
       onPrint();
     } else {
       window.print();
     }
+    setTimeout(() => {
+      document.title = prevTitle;
+    }, 1200);
   };
 
   const handleDownloadPdf = () => {
+    const prevTitle = document.title;
+    document.title = `Republic_of_Kenya_Form5_Birth_Certificate_${application.trackingNumber}`;
     window.print();
+    setTimeout(() => {
+      document.title = prevTitle;
+    }, 1200);
   };
 
   return (
@@ -316,3 +326,4 @@ export default function BirthCertificatePreview({
     </div>
   );
 }
+
