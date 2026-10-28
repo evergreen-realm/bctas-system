@@ -8,6 +8,27 @@ const json = (res: Response, status: number, payload: unknown) => res.status(sta
 const handler = (fn: (req: Request, res: Response) => unknown) => (req: Request, res: Response) => { try { return fn(req, res); } catch (error) { const message = error instanceof Error ? error.message : "Request could not be completed."; return json(res, message.includes("Only") || message.includes("authorised") ? 403 : 400, { error: message }); } };
 
 export function registerBcatsApi(app: Express) {
+  app.post("/api/bcats/auth/login", handler((req, res) => {
+    const { email, password } = req.body || {};
+    const e = String(email || "").trim().toLowerCase();
+    const p = String(password || "");
+    const staffAccounts = [
+      { employeeId: "CRS-CLK-021", fullName: "Mercy Wambui", role: "Clerk" as Role, email: "clerk@nakuru.crs.go.ke", counter: "Counter C3 (Intake & Verification)", active: true, password: "Bcats2026!" },
+      { employeeId: "CRS-REG-014", fullName: "Daniel Karanja", role: "Registrar" as Role, email: "registrar@nakuru.crs.go.ke", counter: "Counter R1 (Approval & Issuance)", active: true, password: "Bcats2026!" },
+      { employeeId: "CRS-ADM-001", fullName: "Faith Njeri", role: "Administrator" as Role, email: "admin@nakuru.crs.go.ke", counter: "HQ Station Command", active: true, password: "Bcats2026!" },
+      { employeeId: "CRS-AUD-003", fullName: "Josephine Achieng", role: "Auditor" as Role, email: "auditor@nakuru.crs.go.ke", counter: "Station Audit & Oversight Desk", active: true, password: "Bcats2026!" },
+      { employeeId: "CRS-CLK-021", fullName: "Mercy Wambui", role: "Clerk" as Role, email: "mercy.wambui@crs.go.ke", counter: "Counter C3", active: true, password: "Bcats2026!" },
+      { employeeId: "CRS-REG-014", fullName: "Daniel Karanja", role: "Registrar" as Role, email: "daniel.karanja@crs.go.ke", counter: "Counter R1", active: true, password: "Bcats2026!" },
+      { employeeId: "CRS-ADM-001", fullName: "Faith Njeri", role: "Administrator" as Role, email: "faith.njeri@crs.go.ke", counter: "HQ Station Command", active: true, password: "Bcats2026!" },
+      { employeeId: "CRS-AUD-003", fullName: "Josephine Achieng", role: "Auditor" as Role, email: "josephine.achieng@crs.go.ke", counter: "Station Audit Desk", active: true, password: "Bcats2026!" },
+    ];
+    const match = staffAccounts.find(a => a.email.toLowerCase() === e && a.password === p);
+    if (!match) {
+      return json(res, 401, { error: "Invalid staff email or password. Use your authorized CRS credentials." });
+    }
+    const { password: _, ...user } = match;
+    return json(res, 200, { success: true, user, token: `bcats_sess_${match.employeeId}_${Date.now()}` });
+  }));
   app.get("/api/bcats/bootstrap", handler((_req, res) => json(res, 200, store.bootstrap())));
   app.get("/api/bcats/applications", handler((req, res) => json(res, 200, store.list(String(req.query.q || "")))));
   app.get("/api/bcats/applications/:id", handler((req, res) => { const found = store.find(req.params.id); return found ? json(res, 200, found) : json(res, 404, { error: "Application was not found in the Nakuru registry." }); }));
