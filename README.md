@@ -195,4 +195,4 @@ vercel deploy --prod
 
 ## 📄 License
 
-This software is developed for academic evaluation at **Zetech University** and operational pilot use at the **Nakuru Civil Registration Office**. Released under the [MIT License](LICENSE).
+This software is developed for academic evaluation at **Zetech University** and operational pilot use at the **Nakuru Civil Registration Office**. Released under the [PolyForm Noncommercial License 1.0.0](LICENSE). Commercial use requires the copyright holder's prior written consent.

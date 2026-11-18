@@ -1,5 +1,17 @@
-BCATS Academic and Public Sector License
+PolyForm Noncommercial License 1.0.0
 
 Copyright (c) 2026 Meshack Maluki / Zetech University academic project.
 
-This source is provided for academic assessment, supervised public-sector prototyping, and authorised Nakuru Civil Registration Office evaluation. Redistribution of citizen data, production credentials, government certificates, or private audit records is prohibited. Production adoption requires written approval from the relevant Civil Registration Services authority and a completed Kenya Data Protection Act 2019 assessment.
+This software is licensed under the PolyForm Noncommercial License 1.0.0.
+You may use, copy, modify, and redistribute this software only for
+noncommercial purposes, subject to the complete license terms:
+
+https://polyformproject.org/licenses/noncommercial/1.0.0/
+
+Commercial use, including use intended for commercial advantage or monetary
+compensation, requires the Licensor's prior written consent.
+
+Redistribution of citizen data, production credentials, government
+certificates, or private audit records is prohibited. Production adoption
+requires written approval from the relevant Civil Registration Services
+authority and a completed Kenya Data Protection Act 2019 assessment.
